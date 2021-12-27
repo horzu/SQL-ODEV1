@@ -23,7 +23,13 @@ SELECT DISTINCT replacement_cost FROM film;
 13 (SELECT COUNT(*) FROM country WHERE country LIKE '_____' ;)
 33 (SELECT COUNT(*) FROM city WHERE city ILIKE '%r';)
 
-**** ODEV4 ****
+**** ODEV5 ****
 SELECT * FROM film WHERE title LIKE '%n' ORDER BY length DESC LIMIT 5;
 SELECT * FROM film WHERE title LIKE '%n' ORDER BY length ASC OFFSET 5 LIMIT 5;
 SELECT * FROM customer WHERE store_id='1' ORDER BY last_name DESC LIMIT 4;
+
+**** ODEV6 ****
+2.9800000000000000 (SELECT AVG(rental_rate) FROM film;)
+92 (SELECT COUNT(*) FROM film WHERE title LIKE 'C%';)
+184 (SELECT MAX(length) FROM film WHERE rental_rate = '0.99';)
+21 (SELECT COUNT(DISTINCT replacement_cost) FROM film WHERE length > '150';)
